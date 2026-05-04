@@ -24,6 +24,8 @@ jobs:
     permissions:
       contents: write
     runs-on: ubuntu-latest
+    env:
+      MAKEFLAGS: -j$(nproc)
     needs: create-release
     strategy:
       matrix:
